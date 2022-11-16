@@ -6,17 +6,17 @@ Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli)
 
 ## :hammer: Funcionalidades do projeto
 
-    ### Geral
+   #### Geral
 
 - `CRUD completo`: inserção, leitura, atualização e remoção de dados em bando de dados;
 - `Login`: cadastro, login e logout;
 - `Geração de API`: exportação de arquivo de configurações do app;
 - `Chamada de API`: importação de arquivo de configurações do app;
 
-    ### Angular
+   #### Angular
 
 
-## :hammer: Tecnologias utilizadas
+## :hammer: Tecnologias utilizadas ♨
 
 - `HTML`: estruturação da página
 - `Typescript`: lógica
