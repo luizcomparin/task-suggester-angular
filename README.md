@@ -4,19 +4,19 @@ Um app que te dá um tema de estudo e um objetivo a cumprir em um certo tempo, p
 
 Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.4. Feito em Angular por sua expansividade. Meu objetivo é praticar e testar minhas habilidades com diversas técnicas e tecnologias diferentes, num só projeto.
 
-## :hammer: Funcionalidades do projeto
+## 🛠 Funcionalidades do projeto
 
-   #### Geral
+    ### Geral
 
 - `CRUD completo`: inserção, leitura, atualização e remoção de dados em bando de dados;
 - `Login`: cadastro, login e logout;
 - `Geração de API`: exportação de arquivo de configurações do app;
 - `Chamada de API`: importação de arquivo de configurações do app;
 
-   #### Angular
+    ### Angular
 
 
-## :hammer: Tecnologias utilizadas ♨
+## ⚙ Tecnologias utilizadas 
 
 - `HTML`: estruturação da página
 - `Typescript`: lógica
