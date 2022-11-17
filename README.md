@@ -1,5 +1,6 @@
 # FeelingLazyAngular
 
+<<<<<<< HEAD
 Um app que te dá um tema de estudo e um objetivo a cumprir em um determinado tempo, para quando estiver indeciso sobre o que estudar ou fazer, ou se estiver sendo preguiçoso.
 
 Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.4. Feito em Angular por sua expansividade. 
@@ -18,6 +19,22 @@ Etapa atual: preparando o front-end
 - `Geração de API`: exportação e importação de arquivo JSON com configurações do app;
 
     #### Angular
+=======
+Um app que te dá um tema de estudo e um objetivo a cumprir em um certo tempo, para quando estiver indeciso sobre o que estudar ou fazer, ou estiver se sentindo preguiçoso.
+
+Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.4. Feito em Angular por sua expansividade. Meu objetivo é praticar e testar minhas habilidades com diversas técnicas e tecnologias diferentes, num só projeto.
+
+## 🛠 Funcionalidades do projeto
+
+    ### Geral
+
+- `CRUD completo`: inserção, leitura, atualização e remoção de dados em bando de dados;
+- `Login`: cadastro, login e logout;
+- `Geração de API`: exportação de arquivo de configurações do app;
+- `Chamada de API`: importação de arquivo de configurações do app;
+
+    ### Angular
+>>>>>>> 5562f9a5c7e0f6a25e2738deacc15d77bf8bd557
 
 
 ## ⚙ Tecnologias utilizadas 
