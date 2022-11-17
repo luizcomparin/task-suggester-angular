@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'feeling-lazy-angular';
+
+    ativo?: boolean  ;
+
+    animar() {
+
+        this.ativo = !this.ativo
+    }
+
 }
