@@ -22,7 +22,6 @@ module.exports = {
                 'background-position':'center right'
               },
             },
-
             slidebackwards: {
                 'from': {
                   'background-position':'center right'
@@ -31,10 +30,30 @@ module.exports = {
                   'background-position':'left center'
                 },
               },
+
+            movedivleft: {
+                'from': {
+                    'transform': 'translateX(0px)'
+                },
+                'to': {
+                    'transform': 'translateX(-1211px)'
+                },
+            },
+            movedivright: {
+                'from': {
+                    'transform': 'translateX(-1211px)'
+                },
+                'to': {
+                    'transform': 'translateX(0px)'
+                },
+            }
+
           },
         animation: {
             'slideforward': 'slideforward .5s ease forwards ',
             'slidebackwards': 'slidebackwards .5s ease forwards ',
+            'movedivleft': 'movedivleft .5s ease forwards',
+            'movedivright': 'movedivright .5s ease forwards',
         },
     },
   },

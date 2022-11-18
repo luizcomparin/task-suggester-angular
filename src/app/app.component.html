@@ -2,41 +2,55 @@
     class="flex w-screen h-screen  bg-dark-green justify-center items-center">
     
     <div id="quadradinho" 
-        class="flex relative flex-col items-center w-[1333px] min-h-[700px] bg-[length:150%] 
-        
+        class="overflow-hidden flex relative flex-col items-center w-[1333px] min-h-[700px] bg-[length:150%] 
+                
                 bg-gradient-to-r from-middle-green  via-light-green to-middle-green rounded-2xl"
                 [class.animate-slideforward]="ativo==true" 
                 [class.animate-slidebackwards]="ativo==false">
-        
+
+        <!-- #TELA INICIAL -->
+        <section class=" flex relative flex-col items-center w-[1333px] min-h-[700px] "
+            [class.animate-movedivleft]="ativo == true"
+            [class.animate-movedivright]="ativo==false">
+
             <!-- #LOGO I'm feeling lazy -->
-        <div class="flex bg-dark-green px-[280px] h-[110px] mt-[110px] rounded-2xl items-center">
-            <span class="flex text-white font-normal text-5xl">
-                I'm feeling lazy
-            </span>
-        </div>
-
-        <!-- #BOTAO GIMME SOMETHING TO DO -->
-        <button class="flex items-center justify-center w-[280px] h-[65px] m-8 
-                shadow-3d active:top-[5px] active:relative active:shadow-none  hover:bg-2dark-green font-medium text-xl text-white bg-dark-green rounded-2xl ">
-            Gimme something to do
-        </button>
-
-        <!-- #TEMA E OBJETIVO -->
-        <div class="flex flex-col w-[800px] space-y-4 mt-4 ">
-            <div class="flex justify-start p-6 w-full h-[110px] text-2xl font-medium  text-white  bg-dark-green  rounded-2xl">
-                Tema: 
+            <div class="flex bg-dark-green px-[280px] h-[110px] mt-[110px] rounded-2xl items-center">
+                <span class="flex text-white font-normal text-5xl">
+                    I'm feeling lazy
+                </span>
             </div>
     
-            <div class=" justify-start mb-[10px] p-6 w-full h-[160px] text-2xl font-medium text-white bg-dark-green  rounded-2xl">
-                Objetivo: 
+            <!-- #BOTAO GIMME SOMETHING TO DO -->
+            <button class="flex items-center justify-center w-[280px] h-[65px] m-8 
+                    shadow-3d active:top-[5px] active:relative active:shadow-none  hover:bg-2dark-green font-medium text-xl text-white bg-dark-green rounded-2xl ">
+                Gimme something to do
+            </button>
+    
+            <!-- #TEMA E OBJETIVO -->
+            <div class="flex flex-col w-[800px] space-y-4 mt-4 ">
+                <div class="flex justify-start p-6 w-full h-[110px] text-2xl font-medium  text-white  bg-dark-green  rounded-2xl">
+                    Tema: 
+                </div>
+        
+                <div class=" justify-start mb-[10px] p-6 w-full h-[160px] text-2xl font-medium text-white bg-dark-green  rounded-2xl">
+                    Objetivo: 
+                </div>
             </div>
-        </div>
+    
+        </section>
 
         <!-- #BOTAO LATERAL -->
-        <button class="flex absolute w-[50px] h-[555px] my-auto mr-6 right-0 top-0 bottom-0	justify-center items-center
-                    text-white font-medium text-4xl bg-dark-green rounded-xl shadow-3d2 active:top-[10px] active:right-[-5px]  active:shadow-none  hover:bg-2dark-green"
-                    (click)="animar()">
-            <
+        <button class="flex absolute w-[50px] h-[555px] my-auto mr-9 right-0 top-0 bottom-0	justify-center items-center
+                     bg-dark-green rounded-xl shadow-3d2 active:top-[10px] active:right-[-5px]  active:shadow-none  hover:bg-2dark-green"
+                    (click)="animar()" [class.animate-movedivleft]="ativo == true"
+                    [class.animate-movedivright]="ativo==false">
+            <span class="text-white font-medium text-4xl" *ngIf="ativo">
+                >
+            </span>
+            <span class="text-white font-medium text-4xl" *ngIf="!ativo">
+                <
+            </span>
+            
         </button>
         <!-- Ao clicar no botão acima, animar a tela de configurações vindo da direita pra 
         esquerda, com o fundo degradê acompanhando, com a parte clara indo pra esquerda e a
