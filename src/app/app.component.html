@@ -41,15 +41,11 @@
 
         <!-- #BOTAO LATERAL -->
         <button class="flex absolute w-[50px] h-[555px] my-auto mr-9 right-0 top-0 bottom-0	justify-center items-center
-                     bg-dark-green rounded-xl shadow-3d2 active:top-[10px] active:right-[-5px]  active:shadow-none  hover:bg-2dark-green"
+        text-white font-medium text-4xl bg-dark-green rounded-xl shadow-3d2 active:top-[10px] active:right-[-5px]  active:shadow-none  hover:bg-2dark-green"
                     (click)="animar()" [class.animate-movedivleft]="ativo == true"
-                    [class.animate-movedivright]="ativo==false">
-            <span class="text-white font-medium text-4xl" *ngIf="ativo">
-                >
-            </span>
-            <span class="text-white font-medium text-4xl" *ngIf="!ativo">
-                <
-            </span>
+                    [class.animate-movedivright]="ativo==false"
+        >
+            {{ ativo ? '>' : '<' }}
             
         </button>
         <!-- Ao clicar no botão acima, animar a tela de configurações vindo da direita pra 
