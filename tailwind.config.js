@@ -8,6 +8,7 @@ module.exports = {
             "2dark-green":"#003941",
             "light-green":"#00755c",
             "middle-green":"#004443",
+            
         },
         boxShadow: {
             '3d': '0 5px 0 #000',

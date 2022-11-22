@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigComponent } from './pages/config/config.component';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'feeling-lazy-angular';
 
     ativo?: boolean  ;
 
     animar() {
-
         this.ativo = !this.ativo
     }
 
+    
+    show = config.textoimport
+    
 }
+let config = new ConfigComponent()
+
+
+

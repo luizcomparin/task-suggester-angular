@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigComponent implements OnInit {
 
-  constructor() { }
+    
+    constructor() { 
+        
+    }
+    
+    ngOnInit(): void {
+    }
 
-  ngOnInit(): void {
-  }
-
+    textoimport =  "Foi importado e utilizado!"
+    
 }
+ 
