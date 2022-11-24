@@ -7,7 +7,7 @@ Meu objetivo é praticar e testar minhas habilidades com diversas técnicas e te
 
 🚧 Projeto em desenvolvimento 🚧 <br>
 Etapa atual: preparando o front-end <br>
-Última atualização: 18/11/22 <br>
+Última atualização: 23/11/22 <br>
 
 
 

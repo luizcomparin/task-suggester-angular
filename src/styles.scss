@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+$fa-font-path: "../../../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+
+
+@layer components {
+    .selected-box {
+      @apply bottom-1 relative border-2 border-dark-green rounded-md ;
+      @apply shadow-3d #{!important};
+    }
+  }
+
+  @layer components {
+    .standard-box {
+      @apply border-[1px] border-dark-green shadow-sm rounded-md;
+    }
+  }
+  
+
+// input {
+//     all: unset;
+//     }
+
+  
+  
+
+//   textarea:focus, input:focus, select:focus {
+//     box-shadow: 0 0 0 0;
+//     border: 0 none;
+//     outline: 0;
+// } 
