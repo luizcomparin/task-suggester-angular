@@ -14,36 +14,44 @@ $fa-font-path: "../../../node_modules/font-awesome/fonts";
 
 @layer components {
     .selected-box {
-      @apply bottom-1 relative border-2 border-dark-green rounded-md ;
-      @apply shadow-3d #{!important} ;
-    };
-  };
-
-  @layer components {
-    .standard-box {
-      @apply border-[1px] border-dark-green shadow-sm rounded-md;
+        @apply bottom-1 relative border-2 border-black rounded-md shadow-3d;
     }
-  }
+
+    ;
+}
+
+;
+
+@layer components {
+    .standard-box {
+        @apply border-[1px] border-dark-green shadow-sm rounded-md;
+    }
+}
 
 
 //   #SCROLLBAR CONFIG
-  ::-webkit-scrollbar {
-    width: 9px;               /* width of the entire scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+    /* width of the entire scrollbar */
     height: 9px;
-    }
-  
-  *::-webkit-scrollbar-track {
-    background: rgba(0, 46, 52, 0.25);        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 46, 52, 0.25);
+    /* color of the tracking area */
     border-radius: 20px;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: #002e34;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #002e34;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
     /* border: 3px solid 002e34;   creates padding around scroll thumb */
-  }
+}
+
 //   #END SCROLLBAR CONFIG
-  
+
 
 
 
@@ -52,8 +60,8 @@ $fa-font-path: "../../../node_modules/font-awesome/fonts";
 //     all: unset;
 //     }
 
-  
-  
+
+
 
 //   textarea:focus, input:focus, select:focus {
 //     box-shadow: 0 0 0 0;

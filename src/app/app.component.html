@@ -1,168 +1,186 @@
-<div id="fundo" 
-    class="flex w-screen h-screen  bg-dark-green justify-center items-center">
-    
-    
-    <div id="app-area" 
-        class="overflow-hidden flex relative flex-col items-center w-[1333px] min-h-[700px] bg-[length:150%] 
+<div id="fundo"
+	class="flex w-screen h-screen  bg-dark-green justify-center items-center">
+
+
+	<div id="app-area"
+		class="overflow-hidden flex relative flex-col items-center w-[1333px] min-h-[700px] bg-[length:150%] 
         bg-gradient-to-r from-middle-green  via-light-green to-middle-green rounded-2xl"
-        [class.animate-slideforward]="ativo==true" 
-        [class.animate-slidebackwards]="ativo==false">
+		[class.animate-slideforward]="ativo==true"
+		[class.animate-slidebackwards]="ativo==false">
 
 
-        <!-- #TELA INICIAL my-auto -->
-        <section class=" flex relative flex-col my-[72px] top-0 bottom-0 items-center w-auto h-full "
-        [class.animate-movedivleft]="ativo == true"
-        [class.animate-movedivright]="ativo==false">
+		<!-- ##### PRIMEIRA TELA ##### -->
+		<!-- ##### PRIMEIRA TELA ##### -->
+		<section class=" flex relative flex-col my-[72px] top-0 bottom-0 items-center w-auto h-full "
+			[class.animate-movedivleft]="ativo == true"
+			[class.animate-movedivright]="ativo==false">
 
 
-            <!-- #LOGO I'm feeling lazy  mt-[110px] -->
-            <div class="flex  bg-dark-green px-[280px] h-[110px]  rounded-2xl items-center">
-                <span class="flex text-white font-normal text-5xl">
-                    I'm feeling lazy
-                </span>
-            </div>
+			<!-- #LOGO I'm feeling lazy  mt-[110px] -->
+			<div class="flex  bg-dark-green px-[280px] h-[110px]  rounded-2xl items-center">
+				<span class="flex text-white font-normal text-5xl">
+					I'm feeling lazy
+				</span>
+			</div>
 
-            <!-- #BOTAO GIMME SOMETHING TO DO -->
-            <button class="flex items-center justify-center w-[280px] h-[65px] m-8 
+			<!-- #BOTAO GIMME SOMETHING TO DO -->
+			<button class="flex items-center justify-center w-[280px] h-[65px] m-8 
                     shadow-3d active:top-[5px] active:relative active:shadow-none  hover:bg-2dark-green font-medium text-xl text-white bg-dark-green rounded-2xl ">
-                Gimme something to do 
-            </button>
+				Gimme something to do
+			</button>
 
-            <!-- #TEMA E OBJETIVO -->
-            <div class="flex flex-col w-[800px] h-full space-y-4 mt-4 ">
-                <!-- h-[120px] -->
-                <div class="flex justify-start p-6 w-full h-[120px] text-2xl font-medium  text-white  bg-dark-green  rounded-2xl">
-                    Tarefa: 
-                </div>
-                <!-- mb-[10px] h-[160px] -->
-                <div class=" justify-start  p-6 w-full h-[160px] text-2xl font-medium text-white bg-dark-green  rounded-2xl">
-                    Descrição: {{show}} <router-outlet></router-outlet>
-                </div>
-            </div>
+			<!-- #TEMA E OBJETIVO -->
+			<div class="flex flex-col w-[800px] h-full space-y-4 mt-4 ">
+				<!-- h-[120px] -->
+				<div class="flex justify-start p-6 w-full h-[120px] text-2xl font-medium  text-white  bg-dark-green  rounded-2xl">
+					Tarefa:
+				</div>
+				<!-- mb-[10px] h-[160px] -->
+				<div class=" justify-start  p-6 w-full h-[160px] text-2xl font-medium text-white bg-dark-green  rounded-2xl">
+					Descrição: {{show}} <router-outlet></router-outlet>
+				</div>
+			</div>
 
-        </section>
-
-
-        <!-- #BOTAO LATERAL -->
-        <button class="flex absolute w-[50px] h-[555px] mr-9 right-0 my-auto top-0 bottom-0	justify-center items-center
-        text-white font-medium text-4xl bg-dark-green rounded-xl shadow-3d2 active:top-[10px] active:right-[-5px]  active:shadow-none  hover:bg-2dark-green"
-                    (click)="animar()" [class.animate-movedivleft]="ativo == true"
-                    [class.animate-movedivright]="ativo==false"
-        >
-            {{ ativo ? '>' : '<' }}
-            
-        </button>
-        <!-- Ao clicar no botão acima, animar a tela de configurações vindo da direita pra 
-        esquerda, com o fundo degradê acompanhando, com a parte clara indo pra esquerda e a
-        parte escura surgindo da direita. -->
+		</section>
+		<!-- ##### /PRIMEIRA TELA ##### -->
+		<!-- ##### /PRIMEIRA TELA ##### -->
 
 
+		<!-- BOTAO LATERAL -->
+		<button class="flex absolute w-[50px] h-[555px] mr-9 right-0 my-auto top-0 bottom-0	justify-center items-center
+                            text-white font-medium text-4xl bg-dark-green rounded-xl shadow-3d2 active:top-[10px] active:right-[-5px]  active:shadow-none  hover:bg-2dark-green"
+			(click)="animar()" [class.animate-movedivleft]="ativo == true" [class.animate-movedivright]="ativo==false">
+			{{ ativo ? '>' : '<' }}
+		</button>
 
-        <!-- #TELA DE CONFIGURAÇÕES -->
-        <section class=" left-[1336px] absolute w-[calc(100%-36px-125px)] grow flex flex-col my-[72px] top-0 bottom-0 items-center bg-slate-400/25 "
-        [class.animate-movedivleft]="ativo == true"
-        [class.animate-movedivright]="ativo==false">
 
-            <!-- #LISTA DE TEMAS bg-black/10 -->
-            <div class=" flex flex-row w-full text-sm p-3 h-auto gap-x-3 ">
-                <div class=" flex flex-col items-center justify-center  gap-3 w-max text-lg font-bold ">
-                    <span>Tarefa: </span>
-                    <div class=" w-full h-[1px] bg-slate-900/25 "></div>
-                    <span>Descrição: </span>
-                </div>
+		<!-- ##### TELA DE CONFIGURAÇÕES ##### -->
+		<!-- ##### TELA DE CONFIGURAÇÕES ##### -->
+		<section class=" left-[1336px] absolute w-[calc(100%-36px-125px)] grow flex flex-col my-[72px] top-0 bottom-0 items-center bg-slate-400/25 "
+			[class.animate-movedivleft]="ativo == true"
+			[class.animate-movedivright]="ativo==false">
 
-                <div class=" flex flex-row w-full text-sm p-3 h-auto gap-x-3 overflow-x-auto ">
+			<!-- CARDS DE TAREFAS -->
+			<div class=" flex flex-row w-full text-sm p-3 h-auto gap-x-3 ">
+				<div class=" flex flex-col items-center justify-center  gap-3 w-max text-lg font-bold ">
+					<span>Tarefa: </span>
+					<div class=" w-full h-[1px] bg-slate-900/25 "></div>
+					<span>Descrição: </span>
+				</div>
 
-                    <div class=" standard-box   grid grid-rows-3 p-4 items-center h-28 min-w-[240px]   bg-slate-400/25 ">
-                        <span class="truncate hover:text-clip">Exercicio de musculação</span>
-                        <div class=" w-full h-[1px] bg-slate-700 "></div>
-                        <span class=" h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
-                            10 barras, 25 abdominais, 15 flexoes, 15 agachamentos, supino reto reclinado 90° de cabeça pra baixo</span>
-                    </div>
-                    <!-- verde bom pro shadow: #0baf2e -->
-                    <div class=" standard-box selected-box   grid grid-rows-3 p-4 items-center h-28 min-w-[240px]  bg-slate-400/25  ">
-                        <span class="truncate hover:text-clip">Limpar o terreno</span>
-                        <div class=" w-full h-[1px] bg-slate-700 "></div>
-                        <span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
-                            Varrer, juntar folha, molhar plantas. </span>
-                    </div>
-    
-                    <div class=" standard-box   grid grid-rows-3  p-4 items-center h-28 min-w-[240px]    bg-slate-400/25 ">
-                        <span class="truncate hover:text-clip">Ritual</span>
-                        <div class=" w-full h-[1px] bg-slate-700 "></div>
-                        <span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
-                            Ordenar pedras em formato de pentagrama, e empilhar 3 pedras em cima de cada.</span>
-                    </div>
-    
-                    <div class=" standard-box grid grid-rows-3  p-4 items-center h-28 min-w-[240px]   bg-slate-400/25  ">
-                        <span class="truncate hover:text-clip">Speedrun de maconha</span>
-                        <div class=" w-full h-[1px] bg-slate-700 "></div>
-                        <span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
-                            Bolar 3 baseados grandes em menos de 4 minutos, e fumar em menos de 10.</span>
-                    </div>
-    
-                    <div class=" standard-box grid grid-rows-3  p-4 items-center h-28 min-w-[240px]   bg-slate-400/25  ">
-                        <span class="truncate hover:text-clip">Meditar</span>
-                        <div class=" w-full h-[1px] bg-slate-700 "></div>
-                        <span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
-                            Sentar em posição controlada, relaxando o corpo. Evitar pensamentos, focar na respiração.</span>
-                    </div>
-    
-                    <div class=" standard-box grid grid-rows-3  p-4 items-center h-28 min-w-[240px]   bg-slate-400/25  ">
-                        <span class="truncate hover:text-clip">Meditar</span>
-                        <div class=" w-full h-[1px] bg-slate-700 "></div>
-                        <span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
-                            Sentar em posição controlada, relaxando o corpo. Evitar pensamentos, focar na respiração.</span>
-                    </div>
-                </div>
-            </div>
+				<div class=" flex flex-row w-full text-sm p-3 h-auto gap-x-3 overflow-x-auto ">
 
-            <!-- #TEMPO -->
-            <div class=" flex flex-row w-full p-3 h-auto gap-x-3  ">
+					<div class=" standard-box   grid grid-rows-3 p-4 items-center h-28 min-w-[240px]   bg-slate-400/25 ">
+						<span id="TAREFA" class="truncate font-semibold hover:text-clip">Exercicio de musculação</span>
+						<div class=" w-full h-[1px] bg-slate-700 "></div>
+						<span id="DESCRICAO" class=" h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
+							10 barras, 25 abdominais, 15 flexoes, 15 agachamentos, supino reto reclinado 90° de cabeça pra baixo</span>
+					</div>
+					<!-- <mat-button-toggle class=" w-6 h-5 ">Jesus Cristo</mat-button-toggle> -->
+					<!-- verde bom pro shadow: #0baf2e -->
+					<div class=" selected-box shadow-dark-green  grid grid-rows-3 p-4 items-center h-28 min-w-[240px]  bg-slate-400/25  ">
+						<span class="truncate font-semibold hover:text-clip">Limpar o terreno</span>
+						<div class=" w-full h-[1px] bg-slate-700 "></div>
+						<span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
+							Varrer, juntar folha, molhar plantas. </span>
+					</div>
 
-                <div class=" flex flex-col items-center justify-center  p-2 w-max ">
-                    <span class=" text-lg font-bold">Tempo: </span>
-                    <span class=" text-sm ">(hh:mm:ss)</span>
-                </div>
+					<div class=" standard-box   grid grid-rows-3  p-4 items-center h-28 min-w-[240px]    bg-slate-400/25 ">
+						<span class="truncate font-semibold hover:text-clip">Ritual</span>
+						<div class=" w-full h-[1px] bg-slate-700 "></div>
+						<span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
+							Ordenar pedras em formato de pentagrama, e empilhar 3 pedras em cima de cada.</span>
+					</div>
 
-                <div class=" selected-box   flex justify-center flex-row p-4 items-center h-16 w-40 bg-slate-400/25 rounded-md ">
-                    <span class=" text-lg font-semibold ">00h:20m:00s</span>
-                </div>
+					<div class=" standard-box grid grid-rows-3  p-4 items-center h-28 min-w-[240px]   bg-slate-400/25  ">
+						<span class="truncate font-semibold hover:text-clip">Speedrun de maconha</span>
+						<div class=" w-full h-[1px] bg-slate-700 "></div>
+						<span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
+							Bolar 3 baseados grandes em menos de 4 minutos, e fumar em menos de 10.</span>
+					</div>
 
-                <div class=" standard-box flex justify-center flex-row p-4 items-center h-16 w-40 shadow-sm  bg-slate-400/25 rounded-md ">
-                    <span class=" text-lg font-semibold ">00h:40m:00s</span>
-                </div>
+					<div class=" standard-box grid grid-rows-3  p-4 items-center h-28 min-w-[240px]   bg-slate-400/25  ">
+						<span class="truncate font-semibold hover:text-clip">Meditar</span>
+						<div class=" w-full h-[1px] bg-slate-700 "></div>
+						<span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
+							Sentar em posição controlada, relaxando o corpo. Evitar pensamentos, focar na respiração.</span>
+					</div>
 
-                <div class=" standard-box flex justify-center flex-row p-4 items-center h-16 w-40 shadow-sm  bg-slate-400/25 rounded-md ">
-                    <span class=" text-lg font-semibold ">1h 30min</span>
-                </div>
+					<div class=" standard-box grid grid-rows-3  p-4 items-center h-28 min-w-[240px]   bg-slate-400/25  ">
+						<span class="truncate font-semibold hover:text-clip">Meditar</span>
+						<div class=" w-full h-[1px] bg-slate-700 "></div>
+						<span class="h-[2.5rem] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden text-ellipsis hover:text-clip">
+							Sentar em posição controlada, relaxando o corpo. Evitar pensamentos, focar na respiração.</span>
+					</div>
+				</div>
+			</div>
+			<!-- ##### /CARD DE TAREFAS ##### -->
 
-                <!-- #CAMPO ADICIONAR TEMPO -->
-                <div class=" flex flex-col items-center px-3  justify-center gap-[6px] ">
-                    
-                    <input class=" standard-box outline-none focus:ring-2 focus:ring-light-green  focus:border-middle-green    bg-white/20 ">
 
-                    <button class=" selected-box active:bottom-0 active:relative active:!shadow-none   px-3 w-auto h-[30px] justify-center items-center text-md font-bold ">
-                        Adicionar tempo
-                    </button>
-                    
-                    <!-- <button class="standard-box  p-0 w-16 h-16 justify-center items-center text-3xl font-bold ">
+			<!-- ##### CARD DE TEMPO ##### -->
+			<div class=" flex flex-row w-full p-3 h-auto gap-x-3  ">
+
+				<div class=" flex flex-col items-center justify-center  p-2 w-max ">
+					<span class=" text-lg font-bold">Tempo: </span>
+					<span class=" text-sm ">(hh:mm:ss)</span>
+				</div>
+
+				<div class=" selected-box shadow-dark-green  flex justify-center flex-row p-4 items-center h-16 w-40 bg-slate-400/25 rounded-md ">
+					<span class=" text-lg font-semibold ">00h:20m:00s</span>
+				</div>
+
+				<div class=" standard-box flex justify-center flex-row p-4 items-center h-16 w-40 shadow-sm  bg-slate-400/25 rounded-md ">
+					<span class=" text-lg font-semibold ">00h:40m:00s</span>
+				</div>
+
+				<div class=" standard-box flex justify-center flex-row p-4 items-center h-16 w-40 shadow-sm  bg-slate-400/25 rounded-md ">
+					<span class=" text-lg font-semibold ">1h 30min</span>
+				</div>
+
+				<!-- BOTAO ADICIONAR TEMPO -->
+				<div class=" flex flex-col items-center px-3  justify-center gap-[6px] ">
+
+					<input class=" standard-box outline-none focus:ring-2 focus:ring-light-green  focus:border-middle-green    bg-white/20 ">
+
+					<button class=" selected-box shadow-dark-green active:bottom-0 active:relative active:!shadow-none   px-3 w-auto h-[30px] justify-center items-center text-md font-bold ">
+						Adicionar tempo
+					</button>
+					<!-- <button class="standard-box  p-0 w-16 h-16 justify-center items-center text-3xl font-bold ">
                         <i class=" fa fa-plus"></i>
                     </button> -->
+				</div>
 
-                                        
-                </div>
+			</div>
+			<!-- ##### /CARD DE TEMPO ##### -->
 
-            </div>
+			<div class=" flex flex-row w-full p-3 h-auto ">
+				<div class=" flex flex-col items-center justify-center  gap-3 w-max text-lg font-bold ">
+					<span>Tarefa: </span>
+					<div class=" w-full h-[1px] bg-slate-900/25 "></div>
+					<span>Descrição: </span>
+				</div>
+
+				<div class=" flex flex-col w-full p-3 h-auto ">
+					<textarea class="standard-box outline-none focus:ring-2 focus:ring-light-green focus:border-middle-green bg-white/20 resize-none rounded-md">
+
+                    </textarea>
+
+					<textarea class="standard-box outline-none focus:ring-2 focus:ring-light-green focus:border-middle-green bg-white/20 resize-none rounded-md">
+
+                    </textarea>
+				</div>
+
+			</div>
 
 
 
 
-        </section>
+
+		</section>
 
 
 
-        
 
-    </div>
+
+	</div>
 </div>
