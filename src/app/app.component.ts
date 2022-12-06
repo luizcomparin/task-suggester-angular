@@ -10,6 +10,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 export class AppComponent {
 	ativo?: boolean;
 
+    tarefa = "Meditar"
+    descricao = "Sentar em posição controlada, relaxando o corpo. Evitar pensamentos, focar na respiração."
+
+
 	animar() {
 		this.ativo = !this.ativo;
 	}
