@@ -47,6 +47,23 @@ module.exports = {
                     'to': {
                         'transform': 'translateX(0px)'
                     },
+                },
+                
+                moveButtonLeft: {
+                    'from': {
+                        'right': '100%',
+                    },
+                    'to': {
+                        'right': '0'
+                    },
+                },
+                moveButtonRight: {
+                    'from': {
+                        'left': '100%'
+                    },
+                    'to': {
+                        'left': '0',
+                    },
                 }
 
             },
@@ -55,7 +72,17 @@ module.exports = {
                 'slidebackwards': 'slidebackwards .5s ease forwards ',
                 'movedivleft': 'movedivleft .5s ease forwards',
                 'movedivright': 'movedivright .5s ease forwards',
+                'moveButtonLeft': 'moveButtonLeft .5s ease forwards',
+                'moveButtonRight': 'moveButtonRight .5s ease forwards',
             },
+            // transitionProperty: {
+            //         transition-property:"left,right";
+            //         transition-duration:0.3s 
+            //         transition-timing-function:ease-in-out 
+            //         transition-delay:0s;
+            //     }
+            
+            
         },
     },
     plugins: [],
